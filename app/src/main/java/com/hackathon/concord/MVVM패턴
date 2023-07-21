@@ -1,0 +1,7 @@
+디자인패턴
+
+Model View ViewModel
+
+Model => 데이터베이스, 클래스를 위한?
+View => 사용자에게 보여지는 기능들
+ViewModel => View에서 호출한 기능

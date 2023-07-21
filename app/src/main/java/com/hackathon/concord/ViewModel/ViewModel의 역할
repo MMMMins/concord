@@ -1,0 +1,11 @@
+
+해당 앱은 Bottom Navigation 또는 Tab 통한 화면 전환을 기초로 진행할 것임.
+Fragment 이용하여 화면 전환에 대해 Class파일을 분리 시킬 것인데,
+
+MainActivity는 앱의 메인이 되고, 해당 화면에서 Bottom Navigation, Tab을 통해 클릭을 하면
+ViewModel의 Fragment Class파일과 layout파일을 호출하여 가독성과 유지보수 측면에서 나은 효과를 볼 수 있음.
+
+Fragment 관한 게시글
+https://junyoung-developer.tistory.com/107
+https://lktprogrammer.tistory.com/182
+
