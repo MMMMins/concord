@@ -1,4 +1,4 @@
-package com.hackathon.concord.ViewModel;
+package com.hackathon.concord.viewModel;
 
 import android.util.Log;
 
@@ -16,6 +16,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginService extends ViewModel {
+    UserModel userModel;
     private MutableLiveData<String> userId = new MutableLiveData<>();
     private MutableLiveData<String> password = new MutableLiveData<>();
 

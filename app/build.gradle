@@ -6,6 +6,10 @@ android {
     namespace 'com.hackathon.concord'
     compileSdk 33
 
+    buildFeatures {
+        dataBinding true
+    }
+
     viewBinding {
         enabled = true
     }

@@ -1,112 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:layout_editor_absoluteX="-9dp"
-    tools:layout_editor_absoluteY="126dp">
-
-    <TextView
-        android:id="@+id/txtTitle"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:gravity="center"
-        android:text="달력"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#9E28B3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="15dp" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="358dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="50dp">
-
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="350dp"
-            android:layout_height="340dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.hackathon.concord.viewModel.DiaryService" />
+    </data>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="412dp">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="126dp">
+
 
         <TextView
-            android:id="@+id/txtContent"
-            android:layout_width="395dp"
-            android:layout_height="116dp"
-            android:visibility="invisible"
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="달력"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#9E28B3"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="5dp" />
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="15dp" />
 
-        <EditText
-            android:id="@+id/contextEditText"
-            android:layout_width="395dp"
-            android:layout_height="116dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:hint="내용을 입력하세요."
-            android:inputType="textMultiLine"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="358dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="50dp">
 
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="395dp"
-            android:layout_height="wrap_content"
-            android:text="저장"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_modify"
-            android:layout_width="178dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="수정"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_del"
-            android:layout_width="178dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="삭제"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="350dp"
+                android:layout_height="340dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="412dp">
+
+            <TextView
+                android:id="@+id/txtSelDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/txtContent"
+                android:text="@={viewModel.getSelDate()}"/>
+
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_width="395dp"
+                android:layout_height="116dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="5dp"
+                android:text="@={viewModel.getContent()}"/>
+
+            <EditText
+                android:id="@+id/contextEditText"
+                android:layout_width="395dp"
+                android:layout_height="116dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="내용을 입력하세요."
+                android:inputType="textMultiLine"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@={viewModel.getNewContent()}"
+                />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="395dp"
+                android:layout_height="wrap_content"
+                android:text="저장"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="@{() -> viewModel.onSaveClick()}"/>
+
+            <Button
+                android:id="@+id/btn_modify"
+                android:layout_width="178dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="수정"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="@{() -> viewModel.onModifyClick()}"/>
+
+            <Button
+                android:id="@+id/btn_del"
+                android:layout_width="178dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="삭제"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="@{() -> viewModel.onDelClick()}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>
