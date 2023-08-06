@@ -1,0 +1,63 @@
+<!-- activity_login.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.hackathon.concord.ViewModel.LoginService" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 나머지 뷰 요소들은 이곳에 포함 -->
+
+        <EditText
+            android:id="@+id/edtID"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="ID"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/edtPwd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@={viewModel.userId}" />
+
+        <EditText
+            android:id="@+id/edtPwd"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtID"
+            android:text="@={viewModel.password}" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:text="Login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtPwd"
+            android:onClick="@{() -> viewModel.onLoginClick()}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

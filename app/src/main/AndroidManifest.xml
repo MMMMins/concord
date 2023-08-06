@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,14 +16,22 @@
         android:theme="@style/Theme.Concord"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <!--구글 맵 api-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDJVwvydQjeqpNZ9qlKfad1ZRgScSJmVSA"/>
+
         <activity
-            android:name=".MainActivity2"
+            android:name=".View.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".VariousFragment"
+            android:name=".View.UserRegActivity"
             android:exported="false" />
         <activity
-            android:name=".InfoFragment"
+            android:name=".View.VariousFragment"
+            android:exported="false" />
+        <activity
+            android:name=".View.InfoFragment"
             android:exported="false" />
         <activity
             android:name=".View.LoadActivity"

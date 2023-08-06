@@ -12,13 +12,9 @@
         android:icon="@android:drawable/ic_dialog_info"
         android:title="등록"
         app:showAsAction="ifRoom"/>
+
     <item
         android:id="@+id/tab3"
-        android:icon="@android:drawable/ic_dialog_info"
-        android:title="찾기"
-        app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/tab4"
         android:icon="@android:drawable/ic_dialog_map"
         android:title="게시판"
         app:showAsAction="ifRoom"/>
