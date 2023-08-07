@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.hackathon.concord.viewModel.LoginService" />
+            type="com.hackathon.concord.viewModel.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,12 +16,12 @@
         <EditText
             android:id="@+id/edtID"
             android:layout_width="220dp"
-            android:layout_height="0dp"
+            android:layout_height="50dp"
             android:layout_marginTop="296dp"
             android:ems="10"
             android:hint="ID"
             android:inputType="textPersonName"
-            android:text="@={viewModel.getUserId()}"
+            android:text="@={viewModel.userId}"
             app:layout_constraintBottom_toTopOf="@+id/edtPwd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,11 +30,11 @@
         <EditText
             android:id="@+id/edtPwd"
             android:layout_width="220dp"
-            android:layout_height="0dp"
+            android:layout_height="50dp"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
-            android:text="@={viewModel.getPassword()}"
+            android:text="@={viewModel.password}"
             app:layout_constraintBottom_toTopOf="@+id/btnLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,9 +43,9 @@
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="220dp"
-            android:layout_height="0dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="300dp"
-            android:onClick="@{() -> viewModel.onLoginClick()}"
+
             android:text="Login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

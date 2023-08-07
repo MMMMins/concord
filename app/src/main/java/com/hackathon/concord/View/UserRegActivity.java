@@ -52,6 +52,7 @@ public class UserRegActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(intent);
                 break;
             case R.id.btnSignUpPage:
+
                 break;
         }
     }
