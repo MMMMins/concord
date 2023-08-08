@@ -2,14 +2,23 @@ package com.hackathon.concord.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.hackathon.concord.Model.UserPetInfoModel;
 import com.hackathon.concord.R;
+import com.hackathon.concord.viewModel.InfoViewModel;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+    private InfoViewModel infoViewModel;
 
     BottomNavigationView nav;
     InfoFragment infoFragment;
@@ -19,8 +28,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent intent = getIntent();
+        infoViewModel = new ViewModelProvider(this).get(InfoViewModel.class);
 
-        infoFragment = new InfoFragment();
+        UserPetInfoModel userPetInfoModel = (UserPetInfoModel) intent.getSerializableExtra("test");
+        infoFragment = new InfoFragment(userPetInfoModel);
         regFragment = new RegFragment();
         variousFragment = new VariousFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.navMain, infoFragment).commit();
@@ -31,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.tab1:
+
                         getSupportFragmentManager().beginTransaction().replace(R.id.navMain, infoFragment).commit();
                         return true;
                     case R.id.tab2:
