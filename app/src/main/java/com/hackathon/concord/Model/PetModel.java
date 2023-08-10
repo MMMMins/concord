@@ -1,5 +1,6 @@
 package com.hackathon.concord.Model;
 
+import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -20,20 +21,35 @@ public class PetModel  implements Serializable {
     private String petGender; // pet_gender를 String으로 변경
     @SerializedName("pet_image")
     private String petImage;
+
+    @SerializedName("pet_size")
+    private String petSize;
+
+
     @SerializedName("pet_breed")
     private String petBreed;
     @SerializedName("pet_lost")
     private String petLost;
+    private Bitmap bitmapImage;
 
-    private byte[] imageByte;
 
-    public byte[] getImageByte() {
-        return imageByte;
+    public String getPetSize() {
+        return petSize;
     }
 
-    public void setImageByte(byte[] imageByte) {
-        this.imageByte = imageByte;
+    public void setPetSize(String petSize) {
+        this.petSize = petSize;
     }
+
+    public Bitmap getBitmapImage() {
+        return bitmapImage;
+    }
+
+    public void setBitmapImage(Bitmap bitmapImage) {
+        this.bitmapImage = bitmapImage;
+    }
+
+
 // 생성자와 Getter 메서드
 
     public String getRegisterNumber() {
