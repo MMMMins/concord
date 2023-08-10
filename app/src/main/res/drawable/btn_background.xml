@@ -1,0 +1,16 @@
+<!-- res/drawable/button_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 그림자 효과 -->
+    <item
+        android:id="@+id/shadow"
+        android:drawable="@drawable/btn_shadow"
+        android:top="6dp"
+        android:right="6dp"
+        android:bottom="8dp"
+        android:left="6dp"/>
+
+    <!-- 동그란 테두리 -->
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/btn_rounded_border"/>
+</layer-list>
