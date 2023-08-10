@@ -1,0 +1,9 @@
+<!-- res/drawable/btn_shadow.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- 버튼 색상, 여기서는 하얀색(#FFFFFF) 사용 -->
+    <corners android:radius="8dp"/> <!-- 테두리를 동그랗게 만드는 반지름 값 -->
+
+    <!-- 그림자 효과 -->
+    <padding android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="4dp"/>
+    <size android:width="0dp" android:height="4dp"/>
+</shape>
