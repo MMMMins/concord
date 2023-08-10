@@ -1,120 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:layout_editor_absoluteX="-9dp"
-    tools:layout_editor_absoluteY="126dp">
-
-
-    <TextView
-        android:id="@+id/txtTitle"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:gravity="center"
-        android:text="달력"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#9E28B3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="15dp" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="321dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="50dp">
-
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="412dp">
-
-        <TextView
-            android:id="@+id/txtContent"
-            android:layout_width="395dp"
-            android:layout_height="116dp"
-            android:layout_marginTop="24dp"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/contextEditText"
-            android:layout_width="395dp"
-            android:layout_height="116dp"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:hint="내용을 입력하세요."
-            android:inputType="textMultiLine"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_del"
-            android:layout_width="178dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="16dp"
-            android:text="삭제"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_modify"
-            app:layout_constraintTop_toBottomOf="@+id/txtContent" />
-
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="395dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            android:text="저장"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtContent" />
-
-        <Button
-            android:id="@+id/btn_modify"
-            android:layout_width="178dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:text="수정"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toStartOf="@+id/btn_del"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtContent" />
+        android:layout_height="250dp">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="68dp"
+        android:background="@drawable/btn_background"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="@drawable/btn_background"
+        android:text="Button"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
