@@ -8,13 +8,14 @@
 
     <FrameLayout
         android:id="@+id/navMain"
-        android:layout_width="413dp"
-        android:layout_height="642dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:background="@color/white"
         android:elevation="10dp"
         app:itemBackground="@color/white"
