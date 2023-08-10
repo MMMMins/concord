@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">concord</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="txtFindPwd"><u>비밀번호를 잊으셨나요?</u></string>
 </resources>
