@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         infoViewModel = new ViewModelProvider(this).get(InfoViewModel.class);
 
-        UserPetInfoModel userPetInfoModel = (UserPetInfoModel) intent.getSerializableExtra("test");
+        UserPetInfoModel userPetInfoModel = (UserPetInfoModel) intent.getSerializableExtra("user_info");
         infoFragment = new InfoFragment(userPetInfoModel);
         regFragment = new RegFragment();
         variousFragment = new VariousFragment();
