@@ -1,4 +1,4 @@
-package com.hackathon.concord.viewModel;
+package com.hackathon.concord.API;
 
 import com.hackathon.concord.Model.UserModel;
 import com.hackathon.concord.Model.UserPetInfoModel;
@@ -19,4 +19,7 @@ public interface RetrofitService {
 
     @GET("api/users/pets/info/{user_id}/")
     Call<UserPetInfoModel> info(@Path("user_id") String user_id);
+
+    @GET("api/pets/imgload/{regnumber}/")
+    Call<ResponseBody> getImage(@Path("regnumber") String regNumber);
 }
