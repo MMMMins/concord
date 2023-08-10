@@ -1,14 +1,13 @@
 package com.hackathon.concord.viewModel;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.hackathon.concord.API.RetrofitService;
 import com.hackathon.concord.Model.LoginDataSource;
 import com.hackathon.concord.Model.UserModel;
-import com.hackathon.concord.View.LoadActivity;
 
 import java.io.IOException;
 
