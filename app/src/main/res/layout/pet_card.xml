@@ -40,12 +40,12 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="6dp"
             android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/txtPetName"
+            app:layout_constraintBottom_toTopOf="@+id/txtResultPetName"
             app:layout_constraintStart_toEndOf="@+id/imgPet"
             app:layout_constraintTop_toBottomOf="@+id/txtRegNumber" />
 
         <TextView
-            android:id="@+id/txtPetName"
+            android:id="@+id/txtResultPetName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -100,7 +100,7 @@
             android:layout_marginTop="9dp"
             android:text="🎂"
             app:layout_constraintStart_toEndOf="@+id/imgPet"
-            app:layout_constraintTop_toBottomOf="@+id/txtPetName" />
+            app:layout_constraintTop_toBottomOf="@+id/txtResultPetName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

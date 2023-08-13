@@ -19,6 +19,7 @@ public class InfoViewModel extends ViewModel implements Serializable {
         return info;
     }
 
+
     public void getInfoList(String user_id){
         Retrofit retrofit = RetrofitClient.getClient();
         RetrofitService retrofitService = retrofit.create(RetrofitService.class);
@@ -27,14 +28,11 @@ public class InfoViewModel extends ViewModel implements Serializable {
             @Override
             public void onResponse(Call<UserPetInfoModel> call, Response<UserPetInfoModel> response) {
                 if (response.isSuccessful()) {
-                    Log.e("에러","a");
                     UserPetInfoModel userPetInfoModel = response.body();
                     if (userPetInfoModel != null) {
                         info.setValue(userPetInfoModel);
                     }
                 } else {
-                    // API 호출에 실패한 경우
-                    Log.e("에러","b");
 
                 }
             }

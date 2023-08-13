@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/viewPetImg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="105dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnImgSelect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <RadioGroup
+        android:id="@+id/btnSizeGroup"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="105dp"
+
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="192dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGenderGroup">
+
+        <RadioButton
+            android:id="@+id/btnSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="소형" />
+
+        <RadioButton
+            android:id="@+id/btnMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="중형" />
+
+        <RadioButton
+            android:id="@+id/btnLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="대형" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/btnGenderGroup"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnSizeGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegPetDate">
+
+        <RadioButton
+            android:id="@+id/btnF"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="암컷" />
+
+        <RadioButton
+            android:id="@+id/btnM"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="수컷" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnImgSelect"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:text="사진 선택"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtRegPetName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPetImg" />
+
+    <EditText
+        android:id="@+id/edtRegPetName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="반려견 이름"
+        android:textSize="14sp"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtRegPetDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnImgSelect" />
+
+    <EditText
+        android:id="@+id/edtRegPetDate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="반려견 생일"
+        android:textSize="14sp"
+
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenderGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegPetName"
+        android:focusable="false"
+        android:onClick="OnClickHandler"
+        />
+
+    <Spinner
+        android:id="@+id/petBreedSelect"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="162dp"
+        android:entries="@array/spinner_array"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSizeGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="218dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="41dp"
+        android:text="등록하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtRegPetBreed"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="품종입력"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petBreedSelect" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

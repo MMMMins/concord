@@ -1,7 +1,6 @@
 package com.hackathon.concord.View;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +49,8 @@ public class InfoLiveViewAdapter extends BaseAdapter {
         listItems.addAll(pets);
     }
 
+    public void createItem(PetModel pet){listItems.add(pet);}
+
     @Override
     public View getView(int i, View view, ViewGroup parent) {
         final Context context = parent.getContext();
@@ -60,7 +61,7 @@ public class InfoLiveViewAdapter extends BaseAdapter {
         }
 
         txtRegNumber = view.findViewById(R.id.txtRegNumber);
-        txtPetName = view.findViewById(R.id.txtPetName);
+        txtPetName = view.findViewById(R.id.txtResultPetName);
         txtPetBreed = view.findViewById(R.id.txtPetBreed);
         txtPetDate = view.findViewById(R.id.txtPetDate);
         imgPetLogo = view.findViewById(R.id.imgPetLogo);

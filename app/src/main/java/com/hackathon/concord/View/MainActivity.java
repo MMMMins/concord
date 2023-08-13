@@ -2,6 +2,7 @@ package com.hackathon.concord.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -19,6 +20,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     private InfoViewModel infoViewModel;
+    private static final int REQUEST_CODE = 200;
 
     BottomNavigationView nav;
     InfoFragment infoFragment;
@@ -32,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
         infoViewModel = new ViewModelProvider(this).get(InfoViewModel.class);
 
         UserPetInfoModel userPetInfoModel = (UserPetInfoModel) intent.getSerializableExtra("user_info");
-        infoFragment = new InfoFragment(userPetInfoModel);
+        infoFragment = new InfoFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("info",userPetInfoModel);
+        infoFragment.setArguments(bundle);
+
         regFragment = new RegFragment();
         variousFragment = new VariousFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.navMain, infoFragment).commit();
@@ -59,4 +65,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }
