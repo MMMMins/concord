@@ -86,7 +86,7 @@ public class InfoLiveViewAdapter extends BaseAdapter {
         imgPetLogo.setScaleType(ImageView.ScaleType.FIT_XY);
         // 이미지뷰의 크기를 동적으로 설정하여 이미지가 화면에 꽉 차게 표시
         Glide.with(view)
-                .load("http://192.168.35.174:8000/api/pets/imgload/"+petModel.getRegisterNumber()+"/")
+                .load("http://172.20.10.7/api/pets/imgload/"+petModel.getRegisterNumber()+"/")
                 .apply(RequestOptions.circleCropTransform()) // 원형 이미지 효과
                 .into(imgPet);
         if(petModel.getPetLost().equals("Y")){

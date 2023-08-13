@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_array">
+        <item>품종</item>
+        <item>믹스견</item>
+        <item>말티즈</item>
+        <item>시츄</item>
+        <item>푸들</item>
+        <item>치와와</item>
+        <item>포메라니안</item>
+        <item>불독</item>
+        <item>래브라도 리트리버</item>
+        <item>골든 리트리버</item>
+        <item>셰퍼드</item>
+        <item>기타</item>
+    </string-array>
+</resources>
