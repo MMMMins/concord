@@ -36,11 +36,6 @@
         <activity
             android:name=".View.PetInfoActivity"
             android:exported="false" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDJVwvydQjeqpNZ9qlKfad1ZRgScSJmVSA" />
-
         <activity
             android:name=".View.LoginActivity"
             android:exported="false" />
